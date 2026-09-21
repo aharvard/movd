@@ -1,0 +1,47 @@
+* { box-sizing: border-box; }
+body {
+  width: 360px;
+  margin: 0;
+  padding: 12px 14px 14px;
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+h1 { font-size: 15px; margin: 0; }
+h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: #555; margin: 14px 0 6px; display: flex; align-items: center; gap: 6px; }
+.muted { color: #888; font-weight: normal; text-transform: none; letter-spacing: 0; }
+.toggle { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+
+form { display: flex; flex-direction: column; gap: 6px; }
+form .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+textarea {
+  width: 100%; padding: 6px 8px; border: 1px solid #ccc; border-radius: 6px; font: inherit; resize: vertical;
+}
+textarea:focus { outline: none; border-color: #c62828; }
+#preview { font-size: 11px; font-family: ui-monospace, Menlo, monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+button {
+  padding: 6px 10px; border: none; border-radius: 6px; background: #c62828; color: #fff;
+  font: inherit; font-weight: 600; cursor: pointer;
+}
+button:hover { background: #a71f1f; }
+button.link { background: none; color: #888; font-weight: normal; padding: 0; margin-left: auto; font-size: 11px; }
+button.link:hover { color: #c62828; }
+
+ul { list-style: none; margin: 0; padding: 0; max-height: 180px; overflow-y: auto; }
+li {
+  display: flex; align-items: center; gap: 8px; padding: 5px 0;
+  border-bottom: 1px solid #f0f0f0; font-family: ui-monospace, Menlo, monospace; font-size: 12px;
+}
+li:last-child { border-bottom: none; }
+li .addr { flex: 1; min-width: 0; }
+li .addr > div:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+li .meta { color: #888; font-size: 11px; }
+li .remove {
+  background: none; color: #999; padding: 0 4px; font-size: 14px; line-height: 1;
+}
+li .remove:hover { color: #c62828; }
+
+
+.small { font-size: 11px; margin: 4px 0 0; }
+body.disabled section, body.disabled form { opacity: .5; }

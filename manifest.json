@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Movd",
+  "version": "2.0.0",
+  "description": "Warns you before you ship an order to an address you don't live at anymore.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["normalize.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Movd"
+  },
+  "icons": { "128": "icon.png" }
+}
